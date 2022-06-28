@@ -1,4 +1,4 @@
-def fibonacci(num)
+def fibonacci_recursion(num)
   # type your code in here
   case num
   when 0
@@ -8,6 +8,21 @@ def fibonacci(num)
   else
     return fibonacci(num-1) + fibonacci(num-2)
   end
+end
+
+def fibonacci(num)
+  num1 = 0
+  num2 = 1
+
+  if [0,1].include?(num) then return num; end
+
+  (num-1).times do |n|
+    val = num1 + num2
+    num1 = num2
+    num2 = val
+  end
+
+  return num2
 end
 
 if __FILE__ == $PROGRAM_NAME
@@ -48,3 +63,13 @@ end
 # in my function I can test if the input is 0 or 1, and
 # if so return 0 or 1
 # if not, then i'll return fibonacci (n-1) + fibonacci(n-2)
+
+# more thoughts 
+
+# If i didn't want to do recursion (maybe in fear of "blowing
+# out the stack"), then I could also create an array, or a couple
+# variables, and simply compute from 0. Starting at 0, then
+# overwriting the variables until I got to the desired number.
+# this would be a simple for loop, and use very little memory
+
+
