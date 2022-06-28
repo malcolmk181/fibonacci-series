@@ -1,4 +1,4 @@
-def fibonacci_recursion(num)
+def fibonacci(num)
   # type your code in here
   case num
   when 0
@@ -10,7 +10,7 @@ def fibonacci_recursion(num)
   end
 end
 
-def fibonacci(num)
+def fibonacci_loop(num)
   num1 = 0
   num2 = 1
 
@@ -54,7 +54,7 @@ end
 # with each following number being the sum of the previous
 # two
 
-# psuedo code
+# pseudo code
 
 # one way i can approach this is via recursion
 # since each number is the sum of the previous two,
